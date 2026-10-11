@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b1019">
+<title>A tiny surprise for Rahul ♡</title>
+<style>
+:root{--pink:#f7a9c4;--cream:#fff0f5;--ink:#1b1019}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--cream);background:radial-gradient(ellipse at top,#3a2035,#1b1019 55%,#100a10);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif}
+main{width:min(760px,92%);margin:auto;padding:28px 0 40px}
+.top{text-align:center;margin-bottom:24px}.ribbon{display:inline-block;background:#d98cac;color:#281421;padding:10px 24px;transform:rotate(-2deg);border-radius:15px 45% 12px 38%;font-weight:700}
+h1{font-size:clamp(2.5rem,9vw,4.2rem);line-height:1.1;margin:26px 0 10px;color:var(--pink);text-shadow:0 0 24px #f7a9c433}
+.subtitle{font-size:1.05rem;color:#f3cadd;line-height:1.6}
+.card{background:linear-gradient(145deg,#2b1c2bfa,#201520fa);border:2px solid #c66f9b;border-radius:28px 22px 30px 20px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 55px #0005;position:relative;line-height:1.85}
+.card:before{content:"♡";position:absolute;top:-23px;left:18px;background:#1b1019;color:var(--pink);font-size:2.5rem;padding:0 8px}
+.message{font-size:clamp(.98rem,2.6vw,1.08rem);letter-spacing:.015em}.message p{margin:0 0 17px}.hello,.signoff{color:var(--pink);font-weight:800;font-size:1.12em}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 16px}
+button{font:inherit;color:var(--cream);cursor:pointer;border:1.5px solid #c66f9b;background:#291a29;border-radius:18px;padding:12px 7px;transition:transform .15s,background .2s}
+button:hover{background:#43243b;transform:translateY(-2px)}.nav button{display:flex;flex-direction:column;align-items:center;gap:5px}.symbol{font-size:1.55rem;color:var(--pink)}.nav small{font-size:.9rem}
+.extra{display:none;margin-top:14px;text-align:center;padding:20px;border:1px dashed #c66f9b;border-radius:20px;background:#241624}.extra.show{display:block}.extra h2{color:var(--pink);margin:0 0 8px}.extra p{line-height:1.7}
+footer{text-align:center;color:#d9a3bf;margin-top:28px;font-size:.95rem}
+#heartField{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}.floating-heart{position:absolute;bottom:-35px;color:#f7a9c4;animation:rise 3.6s ease-out forwards;text-shadow:0 0 10px #f7a9c477}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:430px){main{padding-top:20px}.nav{gap:6px}.nav button{padding:10px 3px;border-radius:14px}.card{border-radius:22px}}
+</style>
+</head>
+<body>
+<div id="heartField" aria-hidden="true"></div>
+<main>
+<header class="top"><div class="ribbon">made with all my heart ♡</div><h1>Heyyy Rahul ♡</h1><div class="subtitle">this is just a tiny surprise for you...<br>because you deserve to know how i feel ♡</div></header>
+<section class="card" aria-label="A message for Rahul">
+<div class="message">
+<p class="hello">heyyy rahullll ❤️🎀</p>
+<p>i just want you to know that i loveee youuu SOOO MUCHHH, like more than words can ever explain 💗 and no matter what happens, i'm not going anywhereee, okayyy? 🫶🏻 i wanna spend sooo much more time with youuu, make the cutest memories with you, annoy you, laugh with you 🫶</p>
+<p>i genuinely love your childish sideee (even tho sometimes it's lowkey SOOO annoying 😭) BUTTT that's literally what makes you YOUUU, and i love every little side of you, even the ones you don't always show everyone elseee ❤️</p>
+<p>and babyyy, i want you to know that i'll always want to be there for you, especially when things get hard and you're at your lowest. you don't always have to be okay around me, you don't have to hide your feelings or pretend to be strong. i'll always be rooting for you, listening to you, and reminding you how loved you areee. 🫂</p>
+<p>you're genuinely so special to me, rahullll, and i'm sooo grateful to have you in my lifeee. i just want more time, more memories, more laughs, and more of USSSS. I LOVEEE YOUUU SOOO MUCHHH BABYYYY ❤️</p>
+<p class="signoff">muahhh 💋💋</p>
+</div></section>
+<nav class="nav" aria-label="Surprise buttons">
+<button id="homeBtn"><span class="symbol">⌂</span><small>home</small></button>
+<button id="gameBtn"><span class="symbol">🎮</span><small>game</small></button>
+<button id="moreBtn"><span class="symbol">♥</span><small>more</small></button>
+<button id="heartsBtn"><span class="symbol">✧</span><small>hearts</small></button>
+</nav>
+<section class="extra" id="extra" aria-live="polite"><h2 id="extraTitle">one more thing ♡</h2><p id="extraText">you make my world a little brighter, Rahul. ♡</p><button id="nextBtn">another cute thing 💌</button></section>
+<footer>you + me = lots more memories ♡<br>made with all my heart, just for you, Rahul! 💗</footer>
+</main>
+<script>
+const extra=document.getElementById('extra'),title=document.getElementById('extraTitle'),txt=document.getElementById('extraText'),next=document.getElementById('nextBtn');
+const notes=[["tiny reminder ♡","you are loved on your good days, your messy days, and every day in between. 🫂"],["my favourite person 🎀","i hope we get a million more little moments to laugh at the silliest things together."],["promise? 💗","when life feels heavy, you don't have to figure everything out alone. i'm cheering for you."],["one last thing 💋","if i could give you one thing, it'd be the ability to see how special you are to me."]];
+let ni=0,game=0;
+function show(t,m){title.textContent=t;txt.textContent=m;extra.classList.add('show');extra.scrollIntoView({behavior:'smooth',block:'nearest'})}
+document.getElementById('homeBtn').onclick=()=>{extra.classList.remove('show');window.scrollTo({top:0,behavior:'smooth'})};
+document.getElementById('moreBtn').onclick=()=>show("one more thing ♡","you make my world a little brighter, Rahul. i'm really glad you're in my life. 💗");
+document.getElementById('gameBtn').onclick=()=>{if(!game){show("tiny love quiz 🎮","Question: who deserves extra hugs and endless support? (hint: R starts their name!)");next.textContent="RAHUL, OBVIOUSLY 💗";game=1}else{show("correct answer!! 🏆","yesss, it's you Rahullll. prize: unlimited love, laughs, and cute memories. 🎀");next.textContent="play again ↻";game=0}};
+next.onclick=()=>{if(game){show("correct answer!! 🏆","yesss, it's you Rahullll. prize: unlimited love, laughs, and cute memories. 🎀");next.textContent="play again ↻";game=0;return}const n=notes[ni++%notes.length];show(n[0],n[1]);next.textContent="another cute thing 💌"};
+function hearts(count=30){const field=document.getElementById('heartField');for(let i=0;i<count;i++){const h=document.createElement('span');h.className='floating-heart';h.textContent=['♥','♡','💗','✧'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.animationDelay=Math.random()*.8+'s';h.style.fontSize=16+Math.random()*22+'px';field.appendChild(h);setTimeout(()=>h.remove(),4500)}}
+document.getElementById('heartsBtn').onclick=()=>hearts(35);
+</script>
+</body>
+</html>
